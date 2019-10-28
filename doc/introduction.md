@@ -2,7 +2,7 @@
 
 Welcome to the Jormungandr User Guide.
 
-Jormungandr 사용 설명서에 오신 것을 환영합니다.
+``Jormungandr 사용 설명서에 오신 것을 환영합니다.``
 
 Jormungandr is a node implementation, written in rust, with the
 initial aim to support the Ouroboros type of consensus protocol.
