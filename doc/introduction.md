@@ -423,7 +423,7 @@ The protocol allows to send multiple types of messages between nodes:
   this is for the fragment propagation.
 * propose new blocks: for the block propagation.
 
-``* 원격 피어의 마지막 블록 ( tip)에 블록을 동기화 합니다.``
+* 원격 피어의 마지막 블록 ( tip)에 블록을 동기화 합니다.
 * 새로운 프래그먼트 (새 트랜잭션, 인증서 등)를 제안합니다. 이것은 프래그먼트 전파를위한 것입니다.
 * 블록 전파를 위해 새로운 블록을 제안하십시오.
 
