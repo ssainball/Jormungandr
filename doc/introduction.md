@@ -390,8 +390,8 @@ Jörmungandr network capabilities are split into:
 1. the REST API, used for informational queries or control of the node;
 2. the gRPC API for blockchain protocol exchange and participation;
 
-1. 정보 조회 또는 노드 제어에 사용되는 REST API;
-2. 블록 체인 프로토콜 교환 및 참여를위한 gRPC API;
+``1. 정보 조회 또는 노드 제어에 사용되는 REST API;``
+``2. 블록 체인 프로토콜 교환 및 참여를위한 gRPC API;``
 
 Here we will only talk of the later, the REST API is described in another
 chapter already: [go to REST documentation](../quickstart/03_rest_api.md)
@@ -425,7 +425,7 @@ The protocol allows to send multiple types of messages between nodes:
 
 ``* 원격 피어의 마지막 블록 ( tip)에 블록을 동기화 합니다.``
 * 새로운 프래그먼트 (새 트랜잭션, 인증서 등)를 제안합니다. 이것은 프래그먼트 전파를위한 것입니다.
-  블록 전파를 위해 새로운 블록을 제안하십시오.
+* 블록 전파를 위해 새로운 블록을 제안하십시오.
 
 There are other commands to optimise the communication and synchronisation
 between nodes.
