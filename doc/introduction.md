@@ -2,19 +2,19 @@
 
 Welcome to the Jormungandr User Guide.
 
-``Jormungandr 사용 설명서에 오신 것을 환영합니다.``
+``Jormungandr 사용자 가이드에 오신 것을 환영합니다.``
 
 Jormungandr is a node implementation, written in rust, with the
 initial aim to support the Ouroboros type of consensus protocol.
 
-``Jormungandr는 Ouroboros 유형의 합의 프로토콜을 지원하기위한 초기 목표를 가지고 Rust로 작성된 노드 구현입니다.``
+``Jormungandr는 Ouroboros 합의 프로토콜 실현 목표를 위해 Rust로 작성된 노드 구현입니다.``
 
 
 A node is a participant of a blockchain network, continuously making,
 sending, receiving, and validating blocks. Each node is responsible
 to make sure that all the rules of the protocol are followed.
 
-``노드는 블록 체인 네트워크의 참여자로서 블록을 지속적으로 만들고, 보내고, 받고, 검증합니다. 각 노드는 프로토콜의 모든 규칙을 준수해야합니다.``
+``노드는 블록체인 네트워크의 참여자로서 블록을 지속적으로 만들고, 보내고, 받고, 검증합니다. 각 노드는 프로토콜의 모든 규칙을 준수해야합니다.``
 
 ## Mythology
 
@@ -22,7 +22,7 @@ Jörmungandr refers to the _Midgard Serpent_ in Norse mythology. It is a hint to
 _Ouroboros_, the Ancient Egyptian serpent, who eat its own tail, as well as the
 [IOHK paper](https://eprint.iacr.org/2016/889.pdf) on proof of stake.
 
-``요르문간드 르는 북유럽 신화에서 미드가르드 뱀 을 가리 킵니다 . 그것은 꼬리를 먹는 고대 이집트의 뱀인 Ouroboros 에게 힌트 이며 스테이크 증거에 관한 IOHK 논문 입니다.``
+``요르문간드는 북유럽 신화에서 미드가르드 뱀을 가리 킵니다. 그것은 자신의 꼬리를 먹는 고대 이집트의 뱀인 Ouroboros 로 이어졌으며 지분 증명에 관한 IOHK 논문 입니다.``
 
 
 # General Concepts
@@ -30,7 +30,7 @@ _Ouroboros_, the Ancient Egyptian serpent, who eat its own tail, as well as the
 This chapter covers the general concepts of the blockchain, and their application
 in the node, and is followed by the node organisation and the user interaction with it.
 
-``이 장에서는 블록 체인의 일반적인 개념과 노드에서의 적용에 대해 설명하고 노드 구성 및 사용자와의 상호 작용이 뒤 따릅니다.``
+``이 장에서는 블록체인의 일반적인 개념, 노드에서의 적용, 노드 구성, 사용자와의 상호 작용을 설명합니다.``
 
 # Blockchain concepts
 
@@ -39,12 +39,12 @@ in the node, and is followed by the node organisation and the user interaction w
 Slots represent the basic unit of time in the blockchain, and at each slot
 a block could be present.
 
-``슬롯은 블록 체인의 기본 시간 단위를 나타내며 각 슬롯에는 블록이 존재할 수 있습니다.``
+``슬롯은 블록체인의 기본 시간 단위를 나타내며 각 슬롯에는 블록이 존재할 수 있습니다.``
 
 Consecutive slots are grouped into epochs, which have updatable size defined
 by the protocol.
 
-``연속 슬롯은 에포크 (epoch)로 그룹화되며,이 프로토콜은 업데이트 가능한 크기를 프로토콜에 의해 정의합니다.``
+``연속 슬롯은 업데이트 가능한 프로토콜에 의해 정의된 에포크 그룹 입니다.``
 
 
 ## Fragments
@@ -54,14 +54,14 @@ events related to the blockchain health (e.g. update to the protocol), but
 also and mainly the general recording of information like transactions and
 certificates.
 
-``프래그먼트는 블록 체인 상태 (예 : 프로토콜 업데이트)와 관련된 모든 가능한 이벤트뿐만 아니라 주로 거래 및 인증서와 같은 정보의 일반적인 기록을 나타내는 블록 체인 데이터의 일부입니다.``
+``프래그먼트는 블록체인 상태 (예 : 프로토콜 업데이트)와 관련된 모든 가능한 이벤트 뿐만 아니라 주로 거래 및 인증서와 같은 정보의 일반적인 기록을 나타내는 블록체인 데이터의 일부입니다.``
 
 ## Blocks
 
 Blocks represent the spine of the blockchain, safely and securely linking
 blocks in a chain, whilst grouping valid fragments together.
 
-``블록은 블록 체인의 스파인을 나타내며 유효한 조각을 그룹화하면서 체인의 블록을 안전하고 안전하게 연결합니다.``
+``블록은 블록체인의 척추 입니다. 유효한 프레이그먼트를 그룹화합니다. 또한 블록체인의 보안을 준수하고 안전하게 연결합니다.``
 
 Blocks are composed of 2 parts:
 
@@ -81,7 +81,7 @@ The blockchain is the general set of rules and the blocks that are periodically 
 Some of the rules and settings, can be changed dynamically in the system by updates,
 while some other are hardcoded in the genesis block (first block of the blockchain).
 
-``블록 체인은 일반적인 규칙 세트와 주기적으로 생성되는 블록입니다. 일부 규칙 및 설정은 업데이트를 통해 시스템에서 동적으로 변경 될 수있는 반면, 일부는 생성 블록 (블록 체인의 첫 번째 블록)에 하드 코딩됩니다.``
+``블록체인은 주기적으로 생성되는 규칙과 블록의 집합입니다. 일부 규칙 및 설정은 업데이트를 통해 시스템에서 동적으로 변경 될 수 있습니다. 또 다른 규칙 및 설정은 생성 제네시스 블록에 하드 코딩됩니다.``
 
 ```
     +-------+      +-------+
